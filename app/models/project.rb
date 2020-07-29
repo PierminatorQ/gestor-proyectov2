@@ -1,4 +1,7 @@
 class Project < ApplicationRecord
-    validates 
-    enum status ["propuesta", "en progreso", "terminado"]
+    validates :name, presence: true
+    validates :description, presence: true
+    validates :status, presence: true
+    
+    enum status: ["propuesta", "en progreso", "terminado"]
 end

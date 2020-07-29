@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class:"form-control"  %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :begin_date %>
-    <%= form.date_select :begin_date %>
+    <%= form.date_select :begin_date, class:"form-control"  %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :end_date %>
-    <%= form.date_select :end_date %>
+    <%= form.date_select :end_date, class:"form-control"  %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :status %>
-    <%= form.number_field :status %>
+    <%= form.select :status, Project.statuses.keys, class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Crear Proyecto", class: "btn btn-info" %>
   </div>
 <% end %>
